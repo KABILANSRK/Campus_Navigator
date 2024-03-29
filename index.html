@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation</title>
+<link rel="stylesheet" href="style.css">
+
+
+<header>
+  <nav>
+      <!-- Your navigation code here -->
+  </nav>
+  <div><class class="logo-container">
+    
+    <img src="https://media.licdn.com/dms/image/C560BAQF4GNfkICqwog/company-logo_200_200/0/1652972062620/licetpattarai_logo?e=2147483647&v=beta&t=bioSvSsirO8h6aUbRZlJd1o-e6pHj2PYEGbOfMakjlI" alt="Your Image" class="logo">
+    <h1 class="title"><span class="gradient-text">𝐏𝐈𝐗𝐄𝐋 𝐍𝐀𝐕𝐈𝐆𝐀𝐓𝐎𝐑</span></h1></div>
+  <!-- Add the image here -->
+  
+  
+  <nav>
+    <ul>
+        <li class="dropdown">
+         
+         
+            <span class="dropbtn" onclick="toggleDropdown()" style="color:#5A4FCF ; font-size: 50px;">&#8801;</span> <!-- Three vertical dots -->
+            <div id="dropdownContent" class="dropdown-content">
+                <a href="https://pattarai.co.in/">𝙰𝚋𝚘𝚞𝚝</a>
+                <a href="vision.html">𝚅𝚒𝚜𝚒𝚘𝚗</a>
+                <a href="contact.html">𝙲𝚘𝚗𝚝𝚊𝚌𝚝</a>
+            </div>
+            <div id="about">
+              <!-- Content about the page -->
+            </div>
+            
+        </li>
+    </ul>
+</nav>
+</header>
+
+
+<style>
+   
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.im.ge/2024/03/17/Rt1WpL.Screenshot-2024-03-17-222938.jpeg'); /* Replace 'your-image-url.jpg' with the URL of your image */
+    background-size: auto; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #556B2F; /* Olive Green text color */
+  }
+
+
+
+  
+    a {
+      color:white;
+    }
+  
+    a:active {
+      color:#1F75FE;
+    }
+  
+    @keyframes moveTitle {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes moveButtons {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes moveDropdown {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(5px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  
+    .title {
+      font-size: 40px;
+      color: transparent; /* Hide original text color */
+      text-align: center;
+      animation: moveTitle 2s infinite alternate; /* Add animation to title */
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right,#1F75FE,#5A4FCF,#007BA7,#5A4FCF);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: flex-end;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav li {
+      margin-right: 20px;
+    }
+
+    button {
+      background-color:#5A4FCF #5A4FCF;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 10px;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, color 0.5s ease; /* Add color transition effect */
+      animation: moveButtons 2s infinite alternate; /* Add animation to buttons */
+    }
+
+    button:hover {
+      background-color: #5A4FCF #5A4FCF;
+      transform: scale(1.05);
+    }
+
+    #button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #textbox-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    select {
+      background-color:#303030;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      width: 75%;
+      margin: 0 auto;
+      animation: moveDropdown 2s infinite alternate; /* Add animation to dropdown */
+    }
+
+    .statement {
+      color: white;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    /* Dropdown Styles */
+    .dropdown {
+      position: absolute; /* Changed position to absolute */
+      top: 2; /* Positioned at the top */
+      left: 0; /* Positioned at the left */
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #303030;
+      min-width: 160px;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0,0,0,0).1;
+      border-radius: 3px;
+      left: 0; /* Adjusted to position the dropdown to the left */
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: black;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color:black
+    }
+    .dropbtn {
+    color: white;
+    font-size: 40px;
+    position: relative;
+    right: -30px; /* Shift towards the right; adjust value as needed */
+    top: -40px; /* Shift upwards; adjust value as needed */
+    cursor: pointer; /* Optional: Changes the cursor on hover to indicate it's clickable */
+}
+
+    header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+          
+            background-color:#222 ; /* Set header background color */
+           
+        
+
+        }
+
+        /* Style for logo */
+        .logo-container {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo {
+    width: 85px;
+    height: auto;
+}
+
+.logo1 {
+    width: 85px;
+    height: auto;
+}
+</style>
+</head>
+<body>
+
+
+
+<main>
+  <!-- Your existing main content -->
+
+  <!-- Message icon -->
+  <div id="message-icon" class="icon" onclick="toggleFeedbackPopup()">📨</div>
+
+  <!-- Feedback pop-up -->
+  <div id="feedback-popup">𝐅𝐞𝐞𝐝𝐛𝐚𝐜𝐤</div>
+</main>
+<main>
+ 
+    <p></p>
+        
+        <br>
+<br>
+<br>
+<p></p>
+    <p style="text-align: center; color: whitesmoke; font-size: 25px;">
+      𝐀𝐫𝐞 𝐲𝐨𝐮 𝐡𝐚𝐯𝐢𝐧𝐠 𝐭𝐫𝐨𝐮𝐛𝐥𝐞 𝐟𝐢𝐧𝐝𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐰𝐚𝐲 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐯𝐞𝐧𝐮𝐞𝐬? 𝐇𝐞𝐫𝐞, 𝐥𝐞𝐭 𝐮𝐬 𝐡𝐞𝐥𝐩 𝐰𝐢𝐭𝐡 𝐨𝐮𝐫 𝐩𝐢𝐱𝐞𝐥 𝐧𝐚𝐯𝐢𝐠𝐚𝐭𝐨𝐫
+        <p></p>
+        
+<br>
+<br>
+<p></p>
+       
+    </p>
+    <p style="text-align: center; color: whitesmoke; font-size: 25px;">
+      𝐅𝐞𝐞𝐥 𝐟𝐫𝐞𝐞 𝐭𝐨 𝐜𝐡𝐨𝐨𝐬𝐞 𝐭𝐡𝐞 𝐨𝐩𝐭𝐢𝐨𝐧𝐬 𝐛𝐞𝐥𝐨𝐰 𝐭𝐨 𝐠𝐮𝐢𝐝𝐞 𝐲𝐨𝐮𝐫 𝐩𝐚𝐭𝐡...
+    </p>
+    <p></p>
+        <br>
+        
+<br>
+<br>
+<p></p>
+    <div id="button-container">
+        <button id="first" style="background-color:  #222;" onclick="showSelected('first')">𝐈𝐧𝐝𝐞𝐞𝐝, 𝐈 𝐟𝐢𝐧𝐝 𝐦𝐲𝐬𝐞𝐥𝐟 𝐢𝐧 𝐭𝐡𝐞 𝐥𝐨𝐛𝐛𝐲 𝐫𝐢𝐠𝐡𝐭 𝐧𝐨𝐰</button>
+        <button id="second" style="background-color: #222;" onclick="showSelected('second')">𝐈 𝐦𝐮𝐬𝐭 𝐦𝐚𝐤𝐞 𝐦𝐲 𝐰𝐚𝐲 𝐭𝐨 𝐭𝐡𝐞 𝐥𝐨𝐛𝐛𝐲</button>
+    </div>
+
+   
+
+  <!-- Choose destination dropdown -->
+   <!-- Choose destination dropdown -->
+   <div id="textbox-container">
+    <p id="statement" class="statement"></p>
+    <div id="dropdown1" style="display: none;">
+        <select id="destination" name="destination" onchange="navigateToPage(this.value)">
+            <option value="">𝙲𝚑𝚘𝚘𝚜𝚎 𝙳𝚎𝚜𝚝𝚒𝚗𝚊𝚝𝚒𝚘𝚗</option>
+            <option value="video1.html">𝐅𝟏𝟏 - 𝐒𝐌𝐀𝐑𝐓 𝐑𝐎𝐎𝐌</option>
+            <option value="video2.html">𝐇𝟏𝟐 - 𝐅𝐀𝐁𝐋𝐀𝐁</option>
+            <option value="video3.html">𝐄𝟎𝟑 - 𝐄𝐏𝐋 𝐥𝐚𝐛</option>
+            <option value="video4.html">𝐆𝟎𝟏 - 𝐀𝐮𝐝𝐢𝐭𝐨𝐫𝐢𝐮𝐦</option>
+            <option value="video5.html">𝐌𝐞𝐧 - 𝐑𝐞𝐬𝐭𝐫𝐨𝐨𝐦</option>
+            <option value="video6.html">𝐖𝐨𝐦𝐞𝐧 - 𝐑𝐞𝐬𝐭𝐫𝐨𝐨𝐦</option>
+        </select>
+    </div>
+    <div id="dropdown2" style="display: none;">
+        <select id="current" name="current" onchange="navigateToPage(this.value)">
+            <option value="">𝙲𝚑𝚘𝚘𝚜𝚎 𝙲𝚞𝚛𝚛𝚎𝚗𝚝 𝙻𝚘𝚌𝚊𝚝𝚒𝚘𝚗</option>
+            <option value="video7.html">𝐅𝟏𝟏 - 𝐒𝐌𝐀𝐑𝐓 𝐑𝐎𝐎𝐌</option>
+            <option value="video8.html">𝐇𝟏𝟐 - 𝐅𝐀𝐁𝐋𝐀𝐁</option>
+            <option value="video9.html">𝐄𝟎𝟑 - 𝐄𝐏𝐋 𝐥𝐚𝐛</option>
+            <option value="video10.html">𝐆𝟎𝟏 - 𝐀𝐮𝐝𝐢𝐭𝐨𝐫𝐢𝐮𝐦</option>
+            <option value="video11.html">𝐌𝐞𝐧 - 𝐑𝐞𝐬𝐭𝐫𝐨𝐨𝐦</option>
+            <option value="video12.html">𝐖𝐨𝐦𝐞𝐧 - 𝐑𝐞𝐬𝐭𝐫𝐨𝐨𝐦</option>
+        </select>
+    </div>
+</div>
+<script>
+    function navigateToPage(pageURL) {
+        if (pageURL) {
+            window.location.href = pageURL;
+        }
+    }
+</script>
+
+<script>
+    function showSelected(selectedButton) {
+        var firstButton = document.getElementById('first');
+        var secondButton = document.getElementById('second');
+        var statement = document.getElementById('statement');
+        var dropdown1 = document.getElementById('dropdown1');
+        var dropdown2 = document.getElementById('dropdown2');
+
+        if (selectedButton === 'first') {
+            statement.innerText = "𝐏𝐥𝐞𝐚𝐬𝐞 𝐢𝐧𝐝𝐢𝐜𝐚𝐭𝐞 𝐰𝐡𝐞𝐫𝐞 𝐲𝐨𝐮'𝐫𝐞 𝐡𝐞𝐚𝐝𝐞𝐝";
+            dropdown1.style.display = 'block';
+            dropdown2.style.display = 'none';
+            secondButton.style.display = 'none';
+        } else if (selectedButton === 'second') {
+            statement.innerText = "𝐒𝐡𝐚𝐫𝐞 𝐲𝐨𝐮𝐫 𝐧𝐞𝐚𝐫𝐛𝐲 𝐯𝐞𝐧𝐮𝐞 𝐟𝐨𝐫 𝐜𝐮𝐫𝐫𝐞𝐧𝐭 𝐥𝐨𝐜𝐚𝐭𝐢𝐨𝐧";
+            dropdown1.style.display = 'none';
+            dropdown2.style.display = 'block';
+            firstButton.style.display = 'none';
+        }
+
+        document.getElementById('textbox-container').style.display = 'block';
+    }
+
+    function toggleDropdown() {
+        var dropdownContent = document.getElementById("dropdownContent");
+        if (dropdownContent.style.display === "none") {
+            dropdownContent.style.display = "block";
+        } else {
+            dropdownContent.style.display = "none";
+        }
+    }
+</script>
+
+
+<p></p>
+        
+<br>
+<br>
+<p></p>
+
+<script>
+  // Function to scroll to the top of the page
+  function scrollToTop() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  }
+
+  // Function to update the message and link based on the selected options
+  function updateMessage() {
+      var destination = document.getElementById("destination").value;
+      var current = document.getElementById("current").value;
+      var message = document.getElementById("message");
+      var link = document.getElementById("link");
+      
+      
+      if (destination && current) {
+          message.style.display = "block";
+          
+          link.innerHTML = "<a href='your_link_here'>Your Link</a>"; // Replace 'your_link_here' with the actual link
+      } else {
+          message.style.display = "none";
+          link.innerHTML = "";
+      }
+  }
+
+  // Show/hide scroll to top button based on scroll position
+  window.onscroll = function() {
+      var scrollToTopBtn = document.getElementById("scroll-to-top");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrollToTopBtn.style.display = "block";
+      } else {
+          scrollToTopBtn.style.display = "none";
+      }
+  };
+</script>
+
+
+</body>
+</html>
+<style>
+  body {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+  }
+  .icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .icon:hover {
+    background-color: #222;
+  }
+  #feedback-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    max-width: 250px;
+    overflow-wrap: break-word;
+  }
+  /* Message shape for pop-up */
+  #feedback-popup::before {
+    content: '';
+    position: absolute;
+    bottom: -15px; /* Adjust to change the arrow height */
+    right: 15px; /* Adjust to change the arrow position */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent  transparent;
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <!-- Your existing main content -->
+
+  <!-- Message icon -->
+  <div id="message-icon" class="icon" onclick="toggleFeedbackPopup()">📨</div>
+  
+
+  <!-- Feedback pop-up -->
+  <div id="feedback-popup">𝐅𝐞𝐞𝐝𝐛𝐚𝐜𝐤</div>
+</main>
+
+<script>
+  // Function to toggle the feedback pop-up
+  function toggleFeedbackPopup() {
+      var feedbackPopup = document.getElementById("feedback-popup");
+      if (feedbackPopup.style.display === "none" || feedbackPopup.style.display === "") {
+          feedbackPopup.style.display = "block";
+      } else {
+          feedbackPopup.style.display = "none";
+          // Redirect to a new webpage on double click
+          var icon = document.getElementById("message-icon");
+          icon.onclick = function() {
+              if(icon.getAttribute("clicked") === "true") {
+                  window.location.href = "https://example.com"; // Change to your desired URL
+              } else {
+                  icon.setAttribute("clicked", "true");
+                  setTimeout(function(){
+                      icon.removeAttribute("clicked");
+                  }, 300);
+              }
+          }
+      }
+  }
+</script>
+<head>
+  <title>Scroll to Top Example</title>
+  <style>
+      #scroll-to-top {
+          position: fixed;
+          bottom: 20px;
+          left: 20px;
+          cursor: pointer;
+          display: none;
+          font-size: 24px;
+          background-color:  black;
+          color: #1F75FE;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 40px;
+      }
+  </style>
+</head>
+<body>
+  <!-- Your page content goes here -->
+  <div style="height: 2000px; ">
+      <!-- Dummy content to create scrolling -->
+  </div>
+
+  <!-- Scroll to top button -->
+  <div id="scroll-to-top" onclick="scrollToTop()">⇧</div>
+
+  <script>
+      function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+      // Show/hide scroll to top button based on scroll position
+      window.onscroll = function() {
+        var scrollToTopBtn = document.getElementById("scroll-to-top");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+  </script>
+</body>
+<script>
+  // Function to toggle the feedback pop-up
+  function toggleFeedbackPopup() {
+      var feedbackPopup = document.getElementById("feedback-popup");
+      if (feedbackPopup.style.display === "none" || feedbackPopup.style.display === "") {
+          feedbackPopup.style.display = "block";
+      } else {
+          feedbackPopup.style.display = "none";
+          // Redirect to feedback.html
+          window.location.href = "feedback.html";
+      }
+  }
+</script>
